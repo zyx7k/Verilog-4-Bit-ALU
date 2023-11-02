@@ -1,0 +1,39 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000019bf2b82990 .scope module, "full_adder_module" "full_adder_module" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "carry_in";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "carry_out";
+o0000019bf2bb6f98 .functor BUFZ 1, C4<z>; HiZ drive
+o0000019bf2bb6fc8 .functor BUFZ 1, C4<z>; HiZ drive
+o0000019bf2bb7028 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000019bf2b82d00 .functor XOR 1, o0000019bf2bb6f98, o0000019bf2bb6fc8, o0000019bf2bb7028, C4<0>;
+L_0000019bf2b831f0 .functor AND 1, o0000019bf2bb6f98, o0000019bf2bb6fc8, C4<1>, C4<1>;
+o0000019bf2bb6ff8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000019bf2b6e830 .functor AND 1, o0000019bf2bb6f98, o0000019bf2bb6ff8, C4<1>, C4<1>;
+L_0000019bf2b6e8a0 .functor AND 1, o0000019bf2bb6fc8, o0000019bf2bb6ff8, C4<1>, C4<1>;
+L_0000019bf2b6e910 .functor AND 1, L_0000019bf2b831f0, L_0000019bf2b6e830, L_0000019bf2b6e8a0, C4<1>;
+v0000019bf2b83350_0 .net "a", 0 0, o0000019bf2bb6f98;  0 drivers
+v0000019bf2b82b20_0 .net "b", 0 0, o0000019bf2bb6fc8;  0 drivers
+v0000019bf2b82bc0_0 .net "c", 0 0, o0000019bf2bb6ff8;  0 drivers
+v0000019bf2b82c60_0 .net "carry_in", 0 0, o0000019bf2bb7028;  0 drivers
+v0000019bf2b6e480_0 .net "carry_out", 0 0, L_0000019bf2b6e910;  1 drivers
+v0000019bf2b6e520_0 .net "sum", 0 0, L_0000019bf2b82d00;  1 drivers
+v0000019bf2b6e5c0_0 .net "t1", 0 0, L_0000019bf2b831f0;  1 drivers
+v0000019bf2b6e660_0 .net "t2", 0 0, L_0000019bf2b6e830;  1 drivers
+v0000019bf2b6e700_0 .net "t3", 0 0, L_0000019bf2b6e8a0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    ".\full_adder_module.v";
