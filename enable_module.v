@@ -3,7 +3,6 @@ module enable_module(E, a0, a1, a2, a3, b0, b1, b2, b3, a0_new, a1_new, a2_new, 
 input E, a0, a1, a2, a3, b0, b1, b2, b3;
 output a0_new, a1_new, a2_new, a3_new, b0_new, b1_new, b2_new, b3_new;
 
-//Final Outputs -->
 and(a0_new, E, a0);
 and(a1_new, E, a1);
 and(a2_new, E, a2);

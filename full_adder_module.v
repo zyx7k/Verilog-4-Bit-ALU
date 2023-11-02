@@ -3,8 +3,6 @@ input a, b, carry_in;
 output sum, carry_out;
 wire t1, t2, t3;
 
-//Definitions and schematic is there in the folder
-
 xor(t1, a, b);
 and(t2, a, b);
 and(t3, t1, carry_in);
