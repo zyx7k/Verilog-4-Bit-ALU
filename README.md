@@ -21,11 +21,11 @@ The input from the user side are the two 4-Bit Numbers and select line inputs S0
 ### Running the project
 To run the project on your computer, you must have Icarus Verilog installed.<br>
 Clone the repo to your local machine, go to the directory and run the following command in your terminal
-'''
+```
 iverilog alu.v
-'''
+```
 You might also want to look at the plots. To do that, run the following commands:
-'''
+```
 vvp alu.v
 gtkwave alu.vcd
-'''
+```
