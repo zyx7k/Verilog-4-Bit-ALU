@@ -8,8 +8,8 @@ The implementation can perform four important operations on two 4-Bit Numbers:
 
 >1. Addition
 >2. Subtraction
->3. ANDing both numbers
->4. Comparator
+>3. Comparator
+>4. ANDing both numbers
 
 ### Inputs
 The input from the user side are the two 4-Bit Numbers. I have created four seperate testbenches to demonstrate the four different operations. For the sake of clarity, the select line combinations and their functions are listed below<br>
